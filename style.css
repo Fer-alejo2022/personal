@@ -1,0 +1,138 @@
+html, body{
+    height: 100%;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+  }
+body{
+    background: #06181f;
+    overflow-x: hidden;
+    font-family: arial;
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.container_general{
+     width: 100%;
+     max-width: 1000px;
+     margin: 20px auto;
+     display: grid;
+     grid-gap: 20px;
+     grid-template-columns: repeat(2,2fr);
+     grid-template-rows: repeat(2,auto);
+}
+.letra{
+    grid-column: span 2;
+}
+.container_general div{
+   margin: 20px auto;
+}
+ img{
+    width: 100%;
+}
+.container_general div > img:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 5px 5px #31e8ff;
+    -webkit-box-shadow: 0px 0px 15px 15px #31e8ff;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.container {
+  display: flex;
+/*   border:1px solid red; */
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #31e8ff;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #31e8ff;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #31e8ff;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #31e8ff;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #31e8ff;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+@media screen and (max-width: 768px){
+           .container_general{
+               grid-template-columns: repeat(1,2fr);
+               width: 90%;
+           }
+           .container_general div{
+            width: 100%;
+            
+           }
+           .letra{
+               grid-column: span 1;
+               width: 12px;
+               font-size: large;
+           }
+           img{
+               width: 100%;
+           }
+           svg{
+            width: 130%;
+            position: relative;
+            right: 70px;
+           }
+}
+
+@media screen and (max-width: 425px){
+       svg{
+           right: 58px;
+       }
+       .container_general{
+           width: 80%;
+       }
+}
+
+@media screen and (max-width: 375px) {
+      svg{
+          right: 46px;
+      }
+      .container_general{
+          width: 70%;
+      }
+}
+@media screen and (max-width: 320px) {
+    .container_general {
+        width: 89%;
+    }
+}
